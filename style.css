@@ -1,0 +1,64 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color: #ffffff; /* White text for better contrast */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(to right, #6a11cb, #2575fc); /* Smooth purplish gradient for the whole page */
+}
+
+.header-logo {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    width: 120px;
+    filter: brightness(0) invert(1); /* This CSS filter inverts colors making it white if the original isn't */
+}
+
+.container {
+    width: 80%;
+    max-width: 600px;
+    padding: 40px;
+    background-color: rgba(0, 0, 0, 0.75); /* Semi-transparent black for the container */
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+    z-index: 2;
+}
+
+.logo-container {
+    opacity: 0;
+    animation: fadeInLogo 5s ease-out forwards;
+}
+
+@keyframes fadeInLogo {
+    0% { opacity: 0; transform: scale(0.8); }
+    100% { opacity: 1; transform: scale(1); }
+}
+
+.logo {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+h1 {
+    color: #00ff00; /* Neon green */
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    line-height: 1.5;
+    color: #00ffff; /* Cyan */
+}
+
+.background-image {
+    opacity: 0.4;
+    z-index: -2;
+}
